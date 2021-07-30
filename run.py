@@ -8,11 +8,17 @@ def create_account( acc_name, user_name, password):
     new_account= Credentials(acc_name, user_name, password)
     return new_account
 
-def save_credantial (contact):
+def save_credantial (Credentials):
     '''
     Function to delete a contacts
     '''
     Credentials.save_credantial()
+
+def display_accounts():
+    '''
+    Function that returns all the saved accounts
+    '''
+    return Credentials.display_accounts()
 
 
 def main():
@@ -23,11 +29,11 @@ def main():
     print('\n')
 
 while True:
-        print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
+        print("Use these short codes : ca - create a new account, da - display accounts, fa -find an account, ex -exit the account list ")
 
         short_code:any = input().lower()
 
-        if short_code == "cc":
+        if short_code == "ca":
             print("New Account")
             print("-"*10)
 
@@ -44,6 +50,22 @@ while True:
             print('\n')
             print(f"New {acc_name} Account Created")
             print('\n')
+
+        if short_code == "da":
+
+            if display_accounts:
+                print("Here is a list of all your accounts")
+                print('\n')
+
+                for account in display_accounts():
+                    print(f"{account.acc_name} {account.user_name} .....{account.password}")
+
+                print('\n')
+            else:
+                print('\n')
+                print("You dont seem to have any contacts saved yet")
+                print('\n')
+
 
 if __name__ == '__main__':
 
