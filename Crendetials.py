@@ -5,6 +5,7 @@ class Credentials:
 
     accounts_list = [] # Empty credential list
     # Init method up here
+    @classmethod
     def save_credantial(self):
 
         '''
@@ -20,3 +21,10 @@ class Credentials:
         self.acc_name = acc_name
         self.user_name = user_name
         self.password = password
+
+    @classmethod
+    def display_accounts(cls):
+        '''
+        method that returns the accounts_list
+        '''
+        return cls.accounts_list
