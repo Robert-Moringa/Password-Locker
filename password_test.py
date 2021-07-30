@@ -1,4 +1,4 @@
-from _typeshed import Self
+# from _typeshed import Self
 import unittest
 from Crendetials import Credentials # Importing the Credentials class
 
