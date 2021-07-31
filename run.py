@@ -20,12 +20,12 @@ def display_accounts():
     '''
     return Credentials.display_accounts()
 
-def del_contact(contact):
-    '''
-    Function to delete a contact
-    '''
-    contact.delete_contact()
 
+def del_account(Credentials):
+    '''
+    Function to delete an account
+    '''
+    Credentials.delete_account()
 
 def main():
     print("Hello Welcome to your password locker site. What is your name?")
