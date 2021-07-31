@@ -33,5 +33,16 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(Credentials.display_accounts(), Credentials.accounts_list)
 
+
+    def test_save_all_accounts(self):
+        '''
+        method that saves a new account
+        '''
+        self.new_account.save_credential()
+        test_account = Credentials("Twitter","@Robert_Maina20","0701316729") #new account
+        test_account.save_credential()
+        self.assertEqual(len(Credentials.accounts_list), 2)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,24 +1,30 @@
 #!/usr/bin/env python3.8
 from Crendetials import Credentials
 
-def create_account( acc_name, user_name, password):
+def create_account(acc_name, user_name, password):
     '''
     Function to creates new account
     '''
     new_account= Credentials(acc_name, user_name, password)
     return new_account
 
-def save_credantial (Credentials):
+def save_credential (Credentials):
     '''
-    Function to delete a contacts
+    Function to delete a credentials
     '''
-    Credentials.save_credantial()
+    Credentials.save_credential()
 
 def display_accounts():
     '''
     Function that returns all the saved accounts
     '''
     return Credentials.display_accounts()
+
+def del_contact(contact):
+    '''
+    Function to delete a contact
+    '''
+    contact.delete_contact()
 
 
 def main():
@@ -46,7 +52,7 @@ while True:
             print("Password ...")
             password = input()
 
-            save_credantial(create_account(acc_name, user_name, password)) # create and save new account.
+            save_credential(create_account(acc_name, user_name, password)) # create and save new account.
             print('\n')
             print(f"New {acc_name} Account Created")
             print('\n')
