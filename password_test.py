@@ -44,5 +44,17 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(len(Credentials.accounts_list), 2)
 
 
+    def test_delete_account(self):
+        '''
+        test_delete_account to test if we can remove an account from our our account list
+        '''
+        self.new_account.save_credential()
+        test_contact = Credentials("Twitter","@Robert_Maina20","0701316729")
+        test_contact.save_credential()
+
+        self.new_account.delete_account()
+        self.assertEqual(len(Credentials.accounts_list), 1)
+
+
 if __name__ == '__main__':
     unittest.main()
