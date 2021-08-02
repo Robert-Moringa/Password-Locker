@@ -90,7 +90,7 @@ while True:
                             del_name.delete_account()
 
                         else:
-                            Print('I')
+                            Print('If you entered an account name, it seems you mis spelt it. KIndly input a new name of an account to delete.')
 
                     else:
                         print('\n')
