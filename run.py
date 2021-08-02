@@ -38,9 +38,12 @@ def main():
 while True:
         print("Hello. Welcome back to Password Locker!")
         print('\n')
-        print(/)
-
-
+        print('Let us create a login username and a password')
+        print('\n')
+        print('Enter username')
+        login_username =  input()
+        print('Enter username')
+        login_password = input()
 
         print("Use these short codes : ca - create a new account, da - display accounts, fa -find an account, ex -exit the account list ")
 
