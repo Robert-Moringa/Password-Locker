@@ -87,7 +87,11 @@ while True:
                         print('Enter the name of an account you wish to delete.')
                         del_name= input()
                         if (del_name == display_accounts()):
-                            
+                            del_name.delete_account()
+
+                        else:
+                            Print('I')
+
                     else:
                         print('\n')
                         print("You dont seem to have any accounts saved yet")
