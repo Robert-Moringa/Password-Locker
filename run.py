@@ -50,8 +50,7 @@ while True:
         if (input_username == login_username):
             print('Enter your password')
             input_password = input()
-        else:
-            print('Wrong Username')
+        
 
 
 
