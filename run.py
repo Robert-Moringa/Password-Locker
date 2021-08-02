@@ -42,8 +42,19 @@ while True:
         print('\n')
         print('Enter username')
         login_username =  input()
-        print('Enter username')
+        print('Enter password')
         login_password = input()
+
+        print('To login in, Enter your username')
+        input_username = input()
+        if (input_username == login_username):
+            print('Enter your password')
+            input_password = input()
+        else:
+            print('Wrong Username')
+
+
+
 
         print("Use these short codes : ca - create a new account, da - display accounts, fa -find an account, ex -exit the account list ")
 
