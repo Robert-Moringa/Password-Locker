@@ -9,7 +9,7 @@ def create_account(acc_name, user_name, password):
     new_account= Credentials(acc_name, user_name, password)
     return new_account
 
-def save_credential (Crendetials):
+def save_credential (Credentials):
     '''
     Function to delete a credentials
     '''
@@ -22,7 +22,7 @@ def display_accounts():
     return Credentials.display_accounts()
 
 
-def del_account(Credential):
+def del_account(Credentials):
     '''
     Function to delete an account
     '''
@@ -85,7 +85,7 @@ while True:
                         print('\n')
                     else:
                         print('\n')
-                        print("You dont seem to have any contacts saved yet")
+                        print("You dont seem to have any accounts saved yet")
                         print('\n')
             else:
                 print('Wrong Password')
