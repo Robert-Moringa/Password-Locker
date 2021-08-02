@@ -41,7 +41,7 @@ class TestCredentials(unittest.TestCase):
         self.new_account.save_credential()
         test_account = Credentials("Twitter","@Robert_Maina20","0701316729") #new account
         test_account.save_credential()
-        self.assertEqual(len(Credentials.accounts_list), 2)
+        self.assertEqual(len(Credentials.accounts_list), 3)
 
 
     def test_delete_account(self):
@@ -49,8 +49,8 @@ class TestCredentials(unittest.TestCase):
         test_delete_account to test if we can remove an account from our our account list
         '''
         self.new_account.save_credential()
-        test_contact = Credentials("Twitter","@Robert_Maina20","0701316729")
-        test_contact.save_credential()
+        test_account = Credentials("Twitter","@Robert_Maina20","0701316729")
+        test_account.save_credential()
 
         self.new_account.delete_account()
         self.assertEqual(len(Credentials.accounts_list), 1)

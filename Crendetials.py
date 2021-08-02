@@ -30,7 +30,7 @@ class Credentials:
 
         Credentials.accounts_list.append(self)
 
-
+    @classmethod
     def delete_account(self):
         '''
         delete account method deletes a saved account from the account list
