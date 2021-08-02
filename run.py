@@ -36,7 +36,9 @@ def main():
     print('\n')
 
 while True:
-        print("Hello. Welcome back to your")
+        print("Hello. Welcome back to Password Locker!")
+        print('\n')
+        print(/)
 
 
 
