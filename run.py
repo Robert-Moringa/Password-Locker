@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.8
 from Crendetials import Credentials
+from User import user
 
 def create_account(acc_name, user_name, password):
     '''
@@ -35,6 +36,10 @@ def main():
     print('\n')
 
 while True:
+        print("Hello. Welcome back to your")
+
+
+
         print("Use these short codes : ca - create a new account, da - display accounts, fa -find an account, ex -exit the account list ")
 
         short_code:any = input().lower()

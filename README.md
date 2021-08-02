@@ -22,7 +22,7 @@ This is a **Password-Locker** application application that will help us manage o
 
 # Prerequisites
 
-To work with Git-Search you need to have some few prerequisites.
+To work with Password locker you need to have some few prerequisites.
 
 This include the following mentioned however below however if you dont have the set below
 
@@ -42,6 +42,9 @@ You can check out the link below for installation instructions!
 
 2. You will also need a Terminal or Vs Code.
 
+3. You will also need to install python3.8 on your computer.
+
+4. After installing, you need to run run.py file on the Terminal using "./run.py" command
 
 # TECHNOLOGIES USED
 

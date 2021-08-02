@@ -7,8 +7,9 @@ class Credentials:
     # Init method up here
 
     def __init__(self, acc_name, user_name, password):
-
-      # docstring removed for simplicity
+        '''
+        method that defines variables to be used
+        '''
 
         self.acc_name = acc_name
         self.user_name = user_name
