@@ -50,47 +50,48 @@ while True:
         if (input_username == login_username):
             print('Enter your password')
             input_password = input()
-        
+            if (input_password == login_password):
+                print("Use these short codes : ca - create a new account, da - display accounts, fa -find an account, ex -exit the account list ")
 
+                short_code:any = input().lower()
 
+                if short_code == "ca":
+                    print("New Account")
+                    print("-"*10)
 
+                    print ("Account name ...")
+                    acc_name = input()
 
-        print("Use these short codes : ca - create a new account, da - display accounts, fa -find an account, ex -exit the account list ")
+                    print("Username ...")
+                    user_name = input()
 
-        short_code:any = input().lower()
+                    print("Password ...")
+                    password = input()
 
-        if short_code == "ca":
-            print("New Account")
-            print("-"*10)
+                    save_credential(create_account(acc_name, user_name, password)) # create and save new account.
+                    print('\n')
+                    print(f"New {acc_name} Account Created")
+                    print('\n')
 
-            print ("Account name ...")
-            acc_name = input()
+                if short_code == "da":
 
-            print("Username ...")
-            user_name = input()
+                    if display_accounts:
+                        print("Here is a list of all your accounts")
+                        print('\n')
 
-            print("Password ...")
-            password = input()
+                        for account in display_accounts():
+                            print(f"{account.acc_name} {account.user_name} .....{account.password}")
 
-            save_credential(create_account(acc_name, user_name, password)) # create and save new account.
-            print('\n')
-            print(f"New {acc_name} Account Created")
-            print('\n')
-
-        if short_code == "da":
-
-            if display_accounts:
-                print("Here is a list of all your accounts")
-                print('\n')
-
-                for account in display_accounts():
-                    print(f"{account.acc_name} {account.user_name} .....{account.password}")
-
-                print('\n')
+                        print('\n')
+                    else:
+                        print('\n')
+                        print("You dont seem to have any contacts saved yet")
+                        print('\n')
             else:
-                print('\n')
-                print("You dont seem to have any contacts saved yet")
-                print('\n')
+                print('Wrong Password')
+
+        else:
+            print('Wrong Username')
 
 
 if __name__ == '__main__':
