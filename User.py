@@ -13,4 +13,11 @@ class user:
         self.login_name = login_name
         self.login_password= login_password
 
-    
+    @classmethod
+    def save_password(self):
+
+        '''
+        save_password method saves password string.
+        '''
+
+        user.login_password
